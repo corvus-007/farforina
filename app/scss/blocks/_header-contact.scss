@@ -1,0 +1,32 @@
+.header-contact {
+  @include clear-list();
+
+  display: flex;
+  align-items: center;
+}
+
+.header-contact__item {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 15px;
+}
+
+.header-contact__icon {
+  display: block;
+  width: 21px;
+  height: 21px;
+  margin-right: 10px;
+  fill: $accent-color;
+  background-color: $accent-color;
+}
+
+.header-contact__label {
+  text-decoration: none;
+}
+
+.header-contact__phone {
+  span {
+    font-size: 24px;
+  }
+}

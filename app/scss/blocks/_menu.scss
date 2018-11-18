@@ -1,0 +1,42 @@
+.menu {
+  @include clear-list();
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 12px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.15;
+    // text-transform: lowercase;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: $accent-color;
+    border-radius: $border-radius * 2;
+    transition: $duration * 1.5;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: #ffffff;
+    }
+  }
+
+  @include mq-min(600px) {
+    a {
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+  }
+}

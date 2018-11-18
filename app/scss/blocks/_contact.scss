@@ -1,0 +1,94 @@
+.contact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f2efee;
+}
+
+.contact__inner {
+  @include mq-min(992px) {
+    display: flex;
+  }
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @include mq-min(500px) {
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 0;
+  }
+
+  @include mq-min(992px) {
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: space-between;
+    margin-right: 40px;
+    flex-shrink: 0;
+  }
+
+  @include mq-min(1200px) {
+    width: 300px;
+  }
+}
+
+.contact__info-section {
+  margin-bottom: 30px;
+  box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(500px) {
+    width: 50%;
+  }
+
+  @include mq-min(992px) {
+    width: 100%;
+  }
+}
+
+.contact__address {
+
+}
+
+.contact-info__title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+  color: $accent-color;
+
+  @include mq-min(500px) {
+    text-align: left;
+  }
+
+  @include mq-min(992px) {
+    text-align: right;
+  }
+}
+
+.contact__work-time {
+
+}
+
+.contact__map-frame {
+  flex-shrink: 0;
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: $border-radius * 2;
+}
+
+.contact__map {
+  height: 300px;
+
+  @include mq-min(768px) {
+    height: 400px;
+  }
+}

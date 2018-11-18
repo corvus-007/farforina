@@ -1,0 +1,26 @@
+.address {
+
+  @include mq-min(992px) {
+    text-align: right;
+  }
+}
+
+.address__list {
+  @include clear-list();
+}
+
+.address__item {
+  font-size: 24px;
+  margin-bottom: 8px;
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+}
+
+.address__icon {
+  fill: currentColor;
+  width: 22px;
+  height: 22px;
+}

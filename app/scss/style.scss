@@ -1,0 +1,44 @@
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "mixins-containers";
+
+// Global
+@import "global/fonts";
+@import "global/base";
+@import "global/layout";
+
+// Vendors
+@import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+
+// Blocks
+@import "blocks/button";
+@import "blocks/input";
+@import "blocks/select";
+@import "blocks/field";
+@import "blocks/form";
+@import "blocks/table";
+@import "blocks/popup";
+@import "blocks/common-section";
+@import "blocks/custom-ol";
+@import "blocks/custom-ul";
+@import "blocks/textual";
+// @import "blocks/homepage-header";
+@import "blocks/header-contact";
+@import "blocks/main-header";
+@import "blocks/intro";
+// @import "blocks/out-cover-toggle";
+// @import "blocks/menu";
+// @import "blocks/main-nav";
+@import "blocks/homepage-carousel";
+@import "blocks/gallery";
+@import "blocks/about-us";
+@import "blocks/contact";
+@import "blocks/address";
+@import "blocks/work-time";
+
+// @import "blocks/page";
+@import "blocks/main-footer";
+@import "blocks/out-cover";
+@import "blocks/socials";
