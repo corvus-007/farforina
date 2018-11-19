@@ -1,22 +1,28 @@
 .homepage-carousel {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .slick-track {
+    display: flex !important;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 
   .slick-arrow {
     position: absolute;
     top: 50%;
     z-index: 1;
+    padding: 0;
     transform: translateY(-50%);
     font-size: 0;
     background-color: #ffffff;
     border: none;
-    padding: 0;
-    // border-radius: 50%;
-    // opacity: 0.8;
-    // box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: $duration;
     outline: none;
     cursor: pointer;
+    transition: $duration;
 
     &::before {
       content: "";
@@ -61,20 +67,19 @@
 }
 
 .homepage-carousel__item {
-  transform: scale(0.7);
-  transition: $duration * 2;
+  transform: scale(0.6);
   opacity: 0.5;
-  overflow: hidden;
+  transition: $duration * 3;
 
   &.slick-center {
+    z-index: 1;
     transform: scale(1);
     opacity: 1;
-    z-index: 2;
-    overflow: visible;
   }
 
   a {
     @include make-fit-object(500, 375);
+
     margin-left: -50px;
     margin-right: -50px;
 
