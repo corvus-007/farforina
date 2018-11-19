@@ -1,7 +1,7 @@
 window.map = (function (window, $) {
   'use strict';
 
-  var dirname = window.util.isDevMode() ? '' : '/wp-content/themes/greenwood/';
+  var dirname = window.util.isDevMode() ? '' : '/wp-content/themes/farforina/';
 
   var mapElem = document.querySelector('#contact-map');
 
@@ -22,10 +22,10 @@ window.map = (function (window, $) {
     var myPlacemark = new ymaps.Placemark([53.260656, 34.365554], {
       hintContent: "г. Брянск, ул. Дуки, 35"
     }, {
-      // iconLayout: 'default#image',
+      iconLayout: 'default#image',
       iconImageHref: dirname + 'images/icon-map-pin.svg',
-      iconImageSize: [54, 54],
-      iconImageOffset: [-25, -54]
+      iconImageSize: [48, 52],
+      iconImageOffset: [-24, -52]
     });
 
     map.geoObjects.add(myPlacemark);

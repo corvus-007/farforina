@@ -1,23 +1,43 @@
 .main-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  max-width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: rgba(#ffffff, 0.8);
+
+  @include mq-min(568px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    max-width: 100%;
+  }
+
+  @include mq-min(768px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .main-header__inner {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  @include mq-min(568px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .main-header__logo {
-  margin-right: $gutter;
+  flex-shrink: 0;
   max-width: 160px;
+  margin-bottom: $gutter;
+
+  @include mq-min(568px) {
+    margin-right: $gutter;
+    margin-bottom: 0;
+  }
 }
 
 .main-header__contact {

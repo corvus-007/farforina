@@ -2,27 +2,47 @@
   @include clear-list();
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+
+  @include mq-min(568px) {
+    flex-direction: row;
+  }
 }
 
 .header-contact__item {
   display: flex;
   align-items: center;
-  margin-right: 40px;
+  margin-bottom: 20px;
+  font-family: $secondary-font;
   font-size: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mq-min(568px) {
+    margin-right: 30px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .header-contact__icon {
   display: block;
-  width: 21px;
-  height: 21px;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
   margin-right: 10px;
   fill: $accent-color;
-  background-color: $accent-color;
 }
 
 .header-contact__label {
   text-decoration: none;
+  color: $base-color;
 }
 
 .header-contact__phone {

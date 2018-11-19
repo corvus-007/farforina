@@ -55,9 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
       breakpoint: 500,
       settings: {
         arrows: false,
-        slidesToShow: 1,
-        centerMode: true,
-        centerPadding: '40px',
+        // slidesToShow: 1,
+        // centerMode: true,
+        centerPadding: '10px',
       }
     }]
   });

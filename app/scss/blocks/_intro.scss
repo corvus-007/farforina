@@ -1,17 +1,23 @@
 .intro {
   position: relative;
   min-height: 500px;
-  padding-top: 150px;
-  background-color: rgb(99, 184, 184);
+  padding-bottom: 60px;
+  // padding-top: 150px;
+  background-color: #ffffff;
   box-sizing: border-box;
+
+  @include mq-max(1023px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
   @include mq-min(1024px) {
     height: 100vh;
+    padding-bottom: 0;
   }
 }
 
 .intro__inner {
-
   @include mq-min(1024px) {
     display: flex;
     flex-direction: column;
@@ -34,9 +40,26 @@
   margin: 0;
   margin-bottom: 35px;
   font-weight: 400;
-  font-size: 65px;
+  font-size: 45px;
   line-height: 1.15;
   font-family: $secondary-font;
+  color: #373b43;
+
+  span {
+    margin-left: -5px;
+    padding-left: 5px;
+    padding-right: 25px;
+    background: linear-gradient(to top, transparent 5px, transparent 0, #eeeeee 0, #eeeeee 20px, transparent 0);
+    box-decoration-break: clone;
+  }
+
+  @include mq-min(568px) {
+    font-size: 55px;
+  }
+
+  @include mq-min(768px) {
+    font-size: 65px;
+  }
 }
 
 .intro__tags {
@@ -44,15 +67,8 @@
 
   margin-bottom: 35px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-
-  &::before {
-    content: "";
-    width: 150px;
-    height: 1px;
-    background-color: $accent-color;
-    margin-right: 25px;
-  }
 
   li {
     margin-right: 1ch;
@@ -60,6 +76,16 @@
     font-size: 12px;
     text-transform: uppercase;
     color: $accent-color;
+  }
+
+  @include mq-min(560px) {
+    &::before {
+      content: "";
+      width: 150px;
+      height: 1px;
+      background-color: $accent-color;
+      margin-right: 25px;
+    }
   }
 }
 
@@ -72,7 +98,14 @@
 .intro__picture {
   @include make-fit-object();
 
+  margin-bottom: -20vmin;
   box-sizing: border-box;
+
+  @media (max-width: 1023px) and (orientation: landscape) {
+    &::before {
+      padding-top: calc(9 / 16 * 100%);
+    }
+  }
 
   @include mq-min(1024px) {
     position: absolute;
@@ -80,5 +113,6 @@
     right: 0;
     bottom: 0;
     width: 50%;
+    margin-bottom: 0;
   }
 }

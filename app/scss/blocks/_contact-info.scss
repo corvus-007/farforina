@@ -1,0 +1,29 @@
+.contact-info {
+
+  @include mq-range(568px, 767px) {
+    display: flex;
+  }
+}
+
+.contact-info__section {
+  margin-bottom: 30px;
+
+  @include mq-range(568px, 767px) {
+    @include calc-column-width(3, 20px);
+  }
+}
+
+.contact-info__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #b7b7b7;
+}
+
+.contact-info__value {
+  font-size: 18px;
+  text-decoration: none;
+  color: $base-color;
+}
