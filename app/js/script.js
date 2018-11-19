@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
   svg4everybody();
 
   $.fancybox.defaults.animationEffect = 'zoom-in-out';
-  $.fancybox.defaults.transitionEffect = 'slide';
+  $.fancybox.defaults.transitionEffect = 'zoom-in-out';
   $.fancybox.defaults.transitionDuration = 600;
 
   $('input[type="tel"]').inputmask({
