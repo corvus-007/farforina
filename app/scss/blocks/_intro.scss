@@ -1,10 +1,19 @@
 .intro {
   position: relative;
   min-height: 500px;
+  padding-top: 60px;
   padding-bottom: 60px;
-  // padding-top: 150px;
   background-color: #ffffff;
   box-sizing: border-box;
+  overflow: hidden;
+
+  @include mq-min(568px) {
+    padding-top: 100px;
+  }
+
+  @include mq-min(768px) {
+    padding-top: 150px;
+  }
 
   @include mq-max(1023px) {
     display: flex;
@@ -29,10 +38,18 @@
 .intro__content {
   position: relative;
   z-index: 1;
+  mix-blend-mode: multiply;
+
+  @include mq-min(568px) {
+    max-width: 75%;
+  }
 
   @include mq-min(1024px) {
+    max-width: 60%;
+  }
+
+  @include mq-min(1200px) {
     max-width: 50%;
-    min-width: 580px;
   }
 }
 
@@ -65,10 +82,10 @@
 .intro__tags {
   @include clear-list();
 
-  margin-bottom: 35px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 35px;
 
   li {
     margin-right: 1ch;
@@ -78,13 +95,19 @@
     color: $accent-color;
   }
 
-  @include mq-min(560px) {
+  @include mq-min(768px) {
     &::before {
       content: "";
-      width: 150px;
+      width: 100px;
       height: 1px;
       background-color: $accent-color;
       margin-right: 25px;
+    }
+  }
+
+  @include mq-min(1024px) {
+    &::before {
+      width: 150px;
     }
   }
 }
@@ -98,21 +121,18 @@
 .intro__picture {
   @include make-fit-object();
 
-  margin-bottom: -20vmin;
-  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35%;
 
-  @media (max-width: 1023px) and (orientation: landscape) {
-    &::before {
-      padding-top: calc(9 / 16 * 100%);
-    }
+  img {
+    object-position: left;
   }
 
   @include mq-min(1024px) {
-    position: absolute;
     top: 150px;
-    right: 0;
-    bottom: 0;
     width: 50%;
-    margin-bottom: 0;
   }
 }
