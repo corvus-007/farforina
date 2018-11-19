@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     slidesToShow: 3,
     centerMode: true,
     centerPadding: '0',
-    speed: 700,
+    speed: 750,
     responsive: [{
       breakpoint: 1025,
       settings: {
