@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
 
   $.fancybox.defaults.animationEffect = 'zoom-in-out';
@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
   var selector = '.homepage-carousel .slick-slide:not(.slick-cloned) a';
 
   // Skip cloned elements
-  $().fancybox({
+  $('[data-homepage-carousel]').fancybox({
     selector: selector,
     backFocus: false
   });
 
   // Attach custom click event on cloned elements,
   // trigger click event on corresponding link
-  $(document).on('click', '.slick-cloned a', function(e) {
+  $(document).on('click', '.slick-cloned a', function (e) {
     $(selector)
       .eq(($(e.currentTarget).attr("data-slick-index") || 0) % $(selector).length)
       .trigger("click.fb-start", {
@@ -61,4 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }]
   });
+
+  $('.product-detail__imagebox').zoom();
 });
