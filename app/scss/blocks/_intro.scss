@@ -12,7 +12,7 @@
   }
 
   @include mq-min(768px) {
-    padding-top: 150px;
+    padding-top: calc(#{$header-height-desktop} + 0px);
   }
 
   @include mq-max(1023px) {
@@ -132,7 +132,7 @@
   }
 
   @include mq-min(1024px) {
-    top: 150px;
+    top: calc(#{$header-height-desktop} + 0px);
     width: 50%;
   }
 }

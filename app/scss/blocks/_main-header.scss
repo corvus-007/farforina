@@ -13,8 +13,8 @@
   }
 
   @include mq-min(768px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -31,7 +31,7 @@
 
 .main-header__logo {
   flex-shrink: 0;
-  max-width: 160px;
+  max-width: 250px;
   margin-bottom: $gutter;
 
   @include mq-min(568px) {
